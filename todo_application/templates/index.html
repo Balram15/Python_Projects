@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flask To-Do App</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    
+    <!-- Form to Add Task -->
+    <form action="/add" method="POST">
+        <input type="text" name="content" placeholder="Task..." required>
+        <select name="priority">
+            <option value="High">High</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+            <li style="text-decoration: {% if task.completed %}line-through{% endif %}">
+                {{ task.content }} - Priority: {{ task.priority }}
+                <a href="{{ url_for('complete_task', id=task.id) }}">Mark as Completed</a> |
+                <a href="{{ url_for('edit_task', id=task.id) }}">Edit</a> |
+                <a href="{{ url_for('delete_task', id=task.id) }}">❌</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
