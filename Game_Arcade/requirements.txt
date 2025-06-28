@@ -1,0 +1,23 @@
+# Python Game Arcade - Dependencies
+# This project uses only Python standard library modules
+# No external dependencies required!
+
+# Standard library modules used:
+# - json (data persistence)
+# - os (file operations)
+# - datetime (timestamps)
+# - random (game randomization)
+# - time (timing and delays)
+# - threading (input handling)
+# - sys (system operations)
+# - collections (deque for snake)
+
+# Optional enhancements (not required for basic functionality):
+# colorama>=0.4.4  # For colored terminal output
+# pygame>=2.0.0    # For sound effects and graphics
+# keyboard>=0.13.5 # For better input handling in snake game
+
+# Development dependencies (optional):
+# pytest>=6.0.0    # For testing
+# black>=21.0.0    # For code formatting
+# mypy>=0.800      # For type checking
